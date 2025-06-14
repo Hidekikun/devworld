@@ -1,0 +1,52 @@
+- Initial update
+  Menu, Positions and toggles
+  VIP, whitelist
+
+- Display pad
+  - Hidden wall toggles removed
+  - Planned updates for sliders for material swaps.
+
+- Toggles for Material and Hair swaps added, sweat, hair color etc.
+
+- Update for Doll Mocaps and animations, fixed textures and lighting.
+
+- World optimization for low end PC users in some worlds. Toggles for addtional objects to lower GPU/CPU impact. New Toys added with Toy settings button.  Normal wand and animated thrusting wand options.
+
+- Further world optimization removing unused textures that were still being called. Space reduction 32% Overall performance improvement 16%
+
+- New world updates and playlists, addidtional pages now for dolls and songs.
+
+- Dolls 2 beta - Doll system menus completely redone from scratch, toggles/sliders for all options. Still fine tuning. Doll IK as well.
+
+- Doll IK beta still in works, menu system fixed can now swap between SPS and other functionality, hair color, skin tone, sweat, hair styles, body sliders for boba, thiccness,booty and more. Head toggles for 
+
+New Doll menu button to load separate menu PER doll.
+
+- Thicc slider
+- Boba slider
+- Booty Slider
+- Hair style sliders for different hairs, based on what you wanna see.  Colliders added to ensure hair doesn't clip.
+- Hair color slider for hairs
+- Body tone for tan slider, normal, tan, dark tan
+- Sweat Sliders for skin shine, sparklies, and sweat to heavy sweat based on your scene.
+- SPS slider to change which area is active (still a WIP as some are a lil off and working to eliminate the offset)
+- Pen toggle for PP to toggle between SPS and static for use with other things.
+- POV toggle to auto hide head per doll
+- Baja blast options for cute endings (2 options, normal and eruption)
+- Cake covered option for the enthusiasts
+- Separate area for 2.0 dolls now (keeping 1.0 for optimized people)
+
+- Update to physics on hair/body and other areas for more realistic feel, fixed colliders and some sps and material issues.
+
+- Dolls 3.0 Mobility function  
+ - New slider to enable grab function for adjustment/placement for dolls (slide back when done)
+ - Fix for PP materials not swapping on some new ones.
+ - Clean up of older textures
+
+- New Networked posters added can now adjust on the fly without the need to reupload
+
+- New Networkd features for subscribers, world can now pull new names without needing to be reuploaded.
+
+- Dolls 3.1 Complete overhaul on textures, revamp on toggles, cleaner interface.
+ - Sweat features for new ones (toggle in the future)
+ - Revamped SPS now properly assigning exactly vs offsetting between due to slider.
