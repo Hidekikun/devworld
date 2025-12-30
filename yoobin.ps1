@@ -1,0 +1,134 @@
+# Yoobin.ps1 (single-shot paste/run)
+# Outputs: Desktop\QuestLink_OpenXR_Report_<COMPUTERNAME>.txt
+
+$OutFile = Join-Path $env:USERPROFILE ("Desktop\QuestLink_OpenXR_Report_{0}.txt" -f $env:COMPUTERNAME)
+
+function Write-Line($s="") { Add-Content -Path $OutFile -Value $s }
+
+function Hash-File($p) {
+  if (Test-Path $p) { (Get-FileHash -Algorithm SHA256 -Path $p).Hash } else { "" }
+}
+
+function File-Ver($p) {
+  if (Test-Path $p) {
+    $fi = Get-Item $p
+    $v = $fi.VersionInfo
+    "{0} | {1} bytes | {2} | {3}" -f $fi.FullName, $fi.Length, $fi.LastWriteTime, $v.FileVersion
+  } else { "" }
+}
+
+function Dump-Reg($key) {
+  Write-Line "== REG: $key =="
+  try {
+    $o = reg query $key 2>&1
+    $o | ForEach-Object { Write-Line $_ }
+  } catch { Write-Line "FAILED: $($_.Exception.Message)" }
+  Write-Line ""
+}
+
+function Dump-Json($p) {
+  Write-Line "== JSON: $p =="
+  if (!(Test-Path $p)) { Write-Line "MISSING"; Write-Line ""; return }
+
+  Write-Line ("SHA256: " + (Hash-File $p))
+  try {
+    $j = Get-Content -Raw -Path $p | ConvertFrom-Json
+    # Common OpenXR runtime manifest fields
+    if ($j.runtime) {
+      if ($j.runtime.library_path) { Write-Line ("runtime.library_path: " + $j.runtime.library_path) }
+      if ($j.runtime.name)        { Write-Line ("runtime.name: " + $j.runtime.name) }
+      if ($j.runtime.version)     { Write-Line ("runtime.version: " + $j.runtime.version) }
+    }
+    if ($j.file_format_version) { Write-Line ("file_format_version: " + $j.file_format_version) }
+  } catch {
+    Write-Line ("JSON PARSE FAILED: " + $_.Exception.Message)
+  }
+  Write-Line ""
+}
+
+# Start fresh
+Remove-Item $OutFile -ErrorAction SilentlyContinue
+Write-Line ("QuestLink / OpenXR Report - " + (Get-Date))
+Write-Line ("Computer: " + $env:COMPUTERNAME)
+Write-Line ("User: " + $env:USERNAME)
+Write-Line ""
+
+# OpenXR registry
+Dump-Reg 'HKLM\SOFTWARE\Khronos\OpenXR\1'
+Dump-Reg 'HKLM\SOFTWARE\Khronos\OpenXR\1\AvailableRuntimes'
+Dump-Reg 'HKLM\SOFTWARE\Khronos\OpenXR\1\ApiLayers\Implicit'
+Dump-Reg 'HKLM\SOFTWARE\Khronos\OpenXR\1\ApiLayers\Explicit'
+Dump-Reg 'HKLM\SOFTWARE\WOW6432Node\Khronos\OpenXR\1'
+Dump-Reg 'HKLM\SOFTWARE\WOW6432Node\Khronos\OpenXR\1\AvailableRuntimes'
+Dump-Reg 'HKLM\SOFTWARE\WOW6432Node\Khronos\OpenXR\1\ApiLayers\Implicit'
+Dump-Reg 'HKLM\SOFTWARE\WOW6432Node\Khronos\OpenXR\1\ApiLayers\Explicit'
+
+# Resolve ActiveRuntime file (if present)
+$active = ""
+try {
+  $active = (Get-ItemProperty 'HKLM:\SOFTWARE\Khronos\OpenXR\1' -Name ActiveRuntime -ErrorAction Stop).ActiveRuntime
+} catch {}
+
+Write-Line "== ActiveRuntime resolved =="
+Write-Line ("ActiveRuntime: " + $active)
+if ($active -and (Test-Path $active)) {
+  Write-Line ("ActiveRuntime SHA256: " + (Hash-File $active))
+  Dump-Json $active
+
+  # Hash the DLL the json points to (if library_path is present and resolvable)
+  try {
+    $j = Get-Content -Raw -Path $active | ConvertFrom-Json
+    $lib = $null
+    if ($j.runtime -and $j.runtime.library_path) { $lib = $j.runtime.library_path }
+    if ($lib) {
+      # library_path can be relative to the json folder
+      $jsonDir = Split-Path $active -Parent
+      $libFull = $lib
+      if (!(Test-Path $libFull)) { $libFull = Join-Path $jsonDir $lib }
+      Write-Line "== Runtime library (from json) =="
+      Write-Line ("LibraryPath raw: " + $lib)
+      Write-Line ("LibraryPath full: " + $libFull)
+      if (Test-Path $libFull) {
+        Write-Line ("Library SHA256: " + (Hash-File $libFull))
+        Write-Line ("Library Version: " + (File-Ver $libFull))
+      } else {
+        Write-Line "Library MISSING at resolved path"
+      }
+      Write-Line ""
+    }
+  } catch {}
+} else {
+  Write-Line "ActiveRuntime file missing or not set."
+  Write-Line ""
+}
+
+# Check both known install roots quickly (hash key files if present)
+$roots = @(
+  "C:\Program Files\Oculus\Support\oculus-runtime",
+  "C:\Program Files\Meta Horizon\Support\oculus-runtime",
+  "C:\Program Files\Meta-Horizon\Support\oculus-runtime"
+)
+
+Write-Line "== Oculus Runtime Folder Checks =="
+foreach ($r in $roots) {
+  if (Test-Path $r) {
+    Write-Line ("FOUND: " + $r)
+    $json = Join-Path $r "oculus_openxr_64.json"
+    if (Test-Path $json) {
+      Write-Line ("  " + (File-Ver $json))
+      Write-Line ("  SHA256: " + (Hash-File $json))
+    } else {
+      Write-Line "  oculus_openxr_64.json: MISSING"
+    }
+    # Grab a few typical runtime binaries if present
+    $candidates = @("OVRServer_x64.exe","OVRServiceLauncher.exe","OculusDash.exe","OculusClient.exe","LibOVRRT64_*.dll","*.openxr.dll","*.dll")
+    foreach ($pat in @("OVRServer_x64.exe","OculusDash.exe","OculusClient.exe","OVRServiceLauncher.exe")) {
+      $p = Join-Path $r $pat
+      if (Test-Path $p) { Write-Line ("  " + (File-Ver $p)) }
+    }
+    Write-Line ""
+  }
+}
+
+Write-Line "DONE"
+Write-Host "Wrote report to: $OutFile"
