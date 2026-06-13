@@ -1,5 +1,5 @@
 [SUBTITLE]
-Latest World Updates!\nUpdates in real time! If a new update shows up that means its safe to rejoin the world!
+Latest World Updates!\nUpdates in real time!
 [END]
 
 [CONTENT]
@@ -9,7 +9,6 @@ Latest World Updates!\nUpdates in real time! If a new update shows up that means
 • Fixed Z-Fighting w/ some buttons and proper renaming/cleanup
 • Added World update poster so we can now see when updates go live and what changed.
 [END]
-
 [CONTENT]
 6/10
 • Added new Bottom positions to Carousel doll (new beta doll going forward)
@@ -17,7 +16,6 @@ Latest World Updates!\nUpdates in real time! If a new update shows up that means
 • Fixed SPS issues (Thigh/feet were on permanently which could mess with penetrators)
 • Disco light default off now
 [END]
-
 [CONTENT]
 6/09
 • Fixed Blue D scaling issue no longer moves away when scaling
@@ -26,7 +24,6 @@ Latest World Updates!\nUpdates in real time! If a new update shows up that means
 • Added new Milk Machines per Yoobin's request ♥ Check Toy Section!
 • Added Wallpaper option for anyone using the video player for music to promo/theme! (Settings menu) Loads and additional screen with on screen controls to load your URL (hides music player)
 [END]
-
 [CONTENT]
 6/07
 • Fixed SPS shader issues with Penetrator sometimes coning when using hand(Ring types) Curves and blendshapes now adhere to SPS properly
@@ -36,7 +33,6 @@ Latest World Updates!\nUpdates in real time! If a new update shows up that means
 • Added Blue D scaling options
 • Added Blue D color options
 [END]
-
 [CONTENT]
 6/05
 • Poster updates synchronized so no more freezing
