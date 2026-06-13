@@ -1,15 +1,44 @@
-[TITLE]
-This is Title.
-[END]
-
 [SUBTITLE]
-This is Subtitle.
+Latest World Updates!\nUpdates in real time! If a new update shows up that means its safe to rejoin the world!
 [END]
 
 [CONTENT]
-This is Content.
+6/12
+• Added more poses to Carousel Doll
+• Fixed Menu displacement issues with some buttons
+• Fixed Z-Fighting w/ some buttons and proper renaming/cleanup
+• Added World update poster so we can now see when updates go live and what changed.
 [END]
 
 [CONTENT]
-Newlines\n1\n2\n3\n4\n5
+6/10
+• Added new Bottom positions to Carousel doll (new beta doll going forward)
+• Updated SPS to include Right and Left Hands
+• Fixed SPS issues (Thigh/feet were on permanently which could mess with penetrators)
+• Disco light default off now
+[END]
+
+[CONTENT]
+6/09
+• Fixed Blue D scaling issue no longer moves away when scaling
+• Updated Pool light options, now you can turn off the center floor lights which cause a blue/whiteish bleaching on avis without proper sliders
+• Set defaults on pad to properly showcase what's On/Off
+• Added new Milk Machines per Yoobin's request ♥ Check Toy Section!
+• Added Wallpaper option for anyone using the video player for music to promo/theme! (Settings menu) Loads and additional screen with on screen controls to load your URL (hides music player)
+[END]
+
+[CONTENT]
+6/07
+• Fixed SPS shader issues with Penetrator sometimes coning when using hand(Ring types) Curves and blendshapes now adhere to SPS properly
+• Optimization to world reducing texture and fbx sizes, cleaning up FBX's in Blender to remove excess geometry etc to reduce size.
+• Added New dance floor to center of pool (Settings menu) recommend Disco light (not ball) set off for this, added extra buttons for effects etc.
+• Changed Doll placement a bit for better reach, updated menus for better understanding and simplifying naming.
+• Added Blue D scaling options
+• Added Blue D color options
+[END]
+
+[CONTENT]
+6/05
+• Poster updates synchronized so no more freezing
+• Added Blue D (in toys menu) along with thrust speed for animated options.
 [END]
