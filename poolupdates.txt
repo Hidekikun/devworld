@@ -1,18 +1,28 @@
 [SUBTITLE]
-Latest World Updates!\nUpdates in real time!
+World Changelog! Updates in Realtime!
 [END]
 
 [CONTENT]
+6/16
+• Added more poses to Demo Slider Doll + idle animation
+• Fixed Admin issue for late joiners, now toggle states are absolute regardless of when someone joins(for pad and other red buttons)
+• Gilbert '26 added  ( if you're streaming today before Yoobin please don't show it to stream till she does ♥ apologies and ty ♥ ) 2-3 second Freeze may occur when enabling, still troubleshooting as this appears sdk sided.
+• Changed defaults for pool floor lights (center not side) to OFF to prevent over whitening of people, toggle still enables.
+• Fixed Playlist menus to lower brightness due to bloom, should be legible now regardless of preset.
+• Added new playlists (+5 hours)
+
+[END]
+[CONTENT]
 6/12
-• Added more poses to Carousel Doll
+• Added more poses to Demo Slider Doll
 • Fixed Menu displacement issues with some buttons
 • Fixed Z-Fighting w/ some buttons and proper renaming/cleanup
 • Added World update poster so we can now see when updates go live and what changed.
 [END]
 [CONTENT]
 6/10
-• Added new Bottom positions to Carousel doll (new beta doll going forward)
-• Updated SPS to include Right and Left Hands
+• Added new Bottom positions to Demo Slider doll (new beta doll going forward)
+• Updated SPS to include Right and Left Hands to Demo Slider doll (testing)
 • Fixed SPS issues (Thigh/feet were on permanently which could mess with penetrators)
 • Disco light default off now
 [END]
