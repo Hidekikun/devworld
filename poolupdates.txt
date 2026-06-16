@@ -10,7 +10,6 @@ World Changelog! Updates in Realtime!
 • Changed defaults for pool floor lights (center not side) to OFF to prevent over whitening of people, toggle still enables.
 • Fixed Playlist menus to lower brightness due to bloom, should be legible now regardless of preset.
 • Added new playlists (+5 hours)
-
 [END]
 [CONTENT]
 6/12
