@@ -6,7 +6,7 @@ World Changelog! Updates in Realtime!
 6/16
 • Added more poses to Demo Slider Doll + idle animation
 • Fixed Admin issue for late joiners, now toggle states are absolute regardless of when someone joins(for pad and other red buttons)
-• Gilbert '26 added  ( if you're streaming today before Yoobin please don't show it to stream till she does ♥ apologies and ty ♥ ) 2-3 second Freeze may occur when enabling, still troubleshooting as this appears sdk sided.
+• Gilbert '26 added [2-3 second Freeze may occur when enabling, still troubleshooting as this appears sdk sided] DW it won't crash you its just compiling.
 • Changed defaults for pool floor lights (center not side) to OFF to prevent over whitening of people, toggle still enables.
 • Fixed Playlist menus to lower brightness due to bloom, should be legible now regardless of preset.
 • Added new playlists (+5 hours)
