@@ -3,6 +3,15 @@ World Changelog! Updates in Realtime!
 [END]
 
 [CONTENT]
+6/19
+• SPS update attempts (testing) Report if any issues
+[END]
+[CONTENT]
+6/18
+• Added new playlists (+20 hours)
+• Updated Playlists with more nonstop mixes
+[END]
+[CONTENT]
 6/16
 • Added more poses to Demo Slider Doll + idle animation
 • Fixed Admin issue for late joiners, now toggle states are absolute regardless of when someone joins(for pad and other red buttons)
