@@ -3,6 +3,14 @@ World Changelog! Updates in Realtime!
 [END]
 
 [CONTENT]
+7/10
+• SPS update attempts (testing) Report if any issues as usual
+• Updated Vid player and resources
+• Music toggle for Saxbert
+• Fixed collision for sps for pen, shouldn't avoid hands now or act weird, just no longer responsive to touch atm
+• SPS2 in the works~
+[END]
+[CONTENT]
 6/19
 • SPS update attempts (testing) Report if any issues
 [END]
