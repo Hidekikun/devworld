@@ -1,7 +1,14 @@
 [SUBTITLE]
 World Changelog! Updates in Realtime!
 [END]
-
+[CONTENT]
+9/17
+• SPS update EVERYTHING WORKS NO MORE CLIPS/POKES ( I'M SO SORRY >< @KEI)
+• Updated Vid player and resources
+• World optimizations
+• Collider updates for interactions when using multiple dolls
+• Menu fixes for broken buttons after updates
+[END]
 [CONTENT]
 7/10
 • SPS update attempts (testing) Report if any issues as usual
