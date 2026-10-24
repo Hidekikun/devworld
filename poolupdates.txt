@@ -2,7 +2,15 @@
 World Changelog! Updates in Realtime!
 [END]
 [CONTENT]
+10/24
+• Minor optimizations
+• More playlists
+• Doll makeup
+• Fixed sizing issue for certain SPS functions
+[END]
+[CONTENT]
 CORGI WAS HERE 🐾 ᵇᵃʳᵏ ᵇᵃʳᵏ 🐾 ૮ ˶ᵔ ᵕ ᵔ˶ ა
+[END]
 [CONTENT]
 9/17
 • SPS update EVERYTHING WORKS NO MORE CLIPS/POKES ( I'M SO SORRY >< @KEI)

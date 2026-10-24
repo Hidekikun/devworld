@@ -1,0 +1,75 @@
+[SUBTITLE]
+World Changelog! Updates in Realtime!
+[END]
+[CONTENT]
+CORGI WAS HERE 🐾 ᵇᵃʳᵏ ᵇᵃʳᵏ 🐾 ૮ ˶ᵔ ᵕ ᵔ˶ ა
+[CONTENT]
+9/17
+• SPS update EVERYTHING WORKS NO MORE CLIPS/POKES ( I'M SO SORRY >< @KEI)
+• Updated Vid player and resources
+• World optimizations
+• Collider updates for interactions when using multiple dolls
+• Menu fixes for broken buttons after updates
+[END]
+[CONTENT]
+7/10
+• SPS update attempts (testing) Report if any issues as usual
+• Updated Vid player and resources
+• Music toggle for Saxbert
+• Fixed collision for sps for pen, shouldn't avoid hands now or act weird, just no longer responsive to touch atm
+• SPS2 in the works~
+[END]
+[CONTENT]
+6/19
+• SPS update attempts (testing) Report if any issues
+[END]
+[CONTENT]
+6/18
+• Added new playlists (+20 hours)
+• Updated Playlists with more nonstop mixes
+[END]
+[CONTENT]
+6/16
+• Added more poses to Demo Slider Doll + idle animation
+• Fixed Admin issue for late joiners, now toggle states are absolute regardless of when someone joins(for pad and other red buttons)
+• Gilbert '26 added [2-3 second Freeze may occur when enabling, still troubleshooting as this appears sdk sided] DW it won't crash you its just compiling.
+• Changed defaults for pool floor lights (center not side) to OFF to prevent over whitening of people, toggle still enables.
+• Fixed Playlist menus to lower brightness due to bloom, should be legible now regardless of preset.
+• Added new playlists (+5 hours)
+[END]
+[CONTENT]
+6/12
+• Added more poses to Demo Slider Doll
+• Fixed Menu displacement issues with some buttons
+• Fixed Z-Fighting w/ some buttons and proper renaming/cleanup
+• Added World update poster so we can now see when updates go live and what changed.
+[END]
+[CONTENT]
+6/10
+• Added new Bottom positions to Demo Slider doll (new beta doll going forward)
+• Updated SPS to include Right and Left Hands to Demo Slider doll (testing)
+• Fixed SPS issues (Thigh/feet were on permanently which could mess with penetrators)
+• Disco light default off now
+[END]
+[CONTENT]
+6/09
+• Fixed Blue D scaling issue no longer moves away when scaling
+• Updated Pool light options, now you can turn off the center floor lights which cause a blue/whiteish bleaching on avis without proper sliders
+• Set defaults on pad to properly showcase what's On/Off
+• Added new Milk Machines per Yoobin's request ♥ Check Toy Section!
+• Added Wallpaper option for anyone using the video player for music to promo/theme! (Settings menu) Loads and additional screen with on screen controls to load your URL (hides music player)
+[END]
+[CONTENT]
+6/07
+• Fixed SPS shader issues with Penetrator sometimes coning when using hand(Ring types) Curves and blendshapes now adhere to SPS properly
+• Optimization to world reducing texture and fbx sizes, cleaning up FBX's in Blender to remove excess geometry etc to reduce size.
+• Added New dance floor to center of pool (Settings menu) recommend Disco light (not ball) set off for this, added extra buttons for effects etc.
+• Changed Doll placement a bit for better reach, updated menus for better understanding and simplifying naming.
+• Added Blue D scaling options
+• Added Blue D color options
+[END]
+[CONTENT]
+6/05
+• Poster updates synchronized so no more freezing
+• Added Blue D (in toys menu) along with thrust speed for animated options.
+[END]
